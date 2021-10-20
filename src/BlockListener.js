@@ -25,8 +25,8 @@ export class BlockListener {
         console.log('Novo uncle:', block)
         this.alert({ number: blockNumber, reward: formatReward(uncle.blockreward), isUncle: true })
       }
-    } catch (error) {
-      console.warn('Erro ao verificar o bloco', error)
+    } catch (_) {
+      console.warn('Erro ao verificar o bloco')
     }
   }
 
